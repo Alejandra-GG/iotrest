@@ -16,3 +16,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('hola', 'ExampleController@index'); //Despues de arroba se agrega el nombre de la funciona a ejecutar
+$router->get('user/{id}', 'ExampleController@show');
+
