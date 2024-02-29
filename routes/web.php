@@ -19,10 +19,22 @@ $router->get('/', function () use ($router) {
 
 $router->get('users', 'UsersController@index'); //Despues de arroba se agrega el nombre de la funciona a ejecutar
 $router->get('users/{id}', 'UsersController@show');
-
 $router->post('users', 'UsersController@store');
 $router->put('users/{id}', 'UsersController@update');
 $router->delete('users/{id}', 'UsersController@delete');
+
+$router->get('sensors', 'SensorsController@index'); 
+$router->get('sensors/{id}', 'SensorsController@show');
+$router->post('sensors', 'SensorsController@store');
+$router->put('sensors/{id}', 'SensorsController@update');
+$router->delete('sensors/{id}', 'SensorsController@destroy');
+
+$router->get('actuators', 'ActuatorsController@index'); 
+$router->get('actuators/{id}', 'ActuatorsController@show');
+$router->post('actuators', 'ActuatorsController@store');
+$router->put('actuators/{id}', 'ActuatorsController@update');
+$router->delete('actuators/{id}', 'ActuatorsController@destroy');
+
 
 
 
